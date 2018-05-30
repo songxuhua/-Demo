@@ -1,0 +1,16 @@
+/* pages/component/navbar/navbar.wxss */
+@import '/app.wxss';
+
+page,
+.page,
+.page__bd{
+    height: 100%;
+    background-color: white;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}

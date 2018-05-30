@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/xing/xing",
+    "pages/shop/shop",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/community/community",
+    "pages/attendtion/attendtion",
+    "pages/me/UserCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#3498db",
+    "list": [
+      {
+        "pagePath": "pages/xing/xing",
+        "text": "首页",
+        "iconPath": "pages/imgs/tab/tab_home_unselect.png",
+        "selectedIconPath": "pages/imgs/tab/tab_home_select.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "精华",
+        "iconPath": "pages/imgs/tab/tab_speech_unselect.png",
+        "selectedIconPath": "pages/imgs/tab/tab_speech_select.png"
+      },
+      {
+        "pagePath": "pages/attendtion/attendtion",
+        "text": "推荐关注",
+        "iconPath": "pages/imgs/tab/tab_contact_unselect.png",
+        "selectedIconPath": "pages/imgs/tab/tab_contact_select.png"
+      },
+      {
+        "pagePath": "pages/me/UserCenter",
+        "text": "账户",
+        "iconPath": "pages/imgs/tab/tab_more_unselect.png",
+        "selectedIconPath": "pages/imgs/tab/tab_more_select.png"
+      }
+    ]
+  }
+}

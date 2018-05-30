@@ -1,0 +1,6 @@
+
+<template name="star">
+   <view class='star'> 
+    <image class='star_img' src='../imgs/xingdetail/star.png' wx:for="{{stars}}"></image>
+   </view> 
+</template>

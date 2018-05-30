@@ -1,0 +1,9 @@
+<!--pages/shop/shop.wxml-->
+<import src="shopList.wxml" />
+
+<navbar tabs="{{tabs}}" bindmyevent="myEventListener">
+   <view wx:for="{{tabs}}" class='weui-tab__content' slot="{{index}}" hidden="{{curindex != index}}" >
+    <template is="shopList" data="{{shops}}"  >
+    </template>
+  </view> 
+</navbar>

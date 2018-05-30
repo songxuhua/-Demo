@@ -1,0 +1,52 @@
+<!--pages/xing/xing.wxml-->
+<scroll-view scroll-y bindscrolltolower="loadMoreData">
+  <!--banner  -->
+  <view class="banner">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="#2089DC" circular="true" bindchange="EventHandle">
+      <block wx:for="{{banners}}">
+        <swiper-item>
+          <image src="{{item.imgUrl}}" style="width:100%;" mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--cateory  -->
+  <view class="weui-grids">
+    <view class="weui-grid" wx:for="{{catergorys}}">
+      <navigator url="{{item.url}}">
+        <view class="weui-grid__icon">
+          <image src="{{item.cat_icon}}" mode="scaleToFill" />
+        </view>
+        <text class="weui-grid__label">{{item.cat_name}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!--look  -->
+  <view class='look-bg'>
+    <text class='look-text'>-Look what they're doing-</text>
+  </view>
+  <!--community  -->
+  <view class='content_bg'>
+    <view class='content' wx:for="{{items}}">
+      <view class='content_line'>
+        <view class="content_icon">
+          <image src='{{item.user_url}}' mode="aspectFit"></image>
+        </view>
+        <view class='content_text_bg'>
+          <text class='cuser_name'>{{item.user_name}}</text>
+          <text class='cuser_content'>{{item.content}}</text>
+          <view class='address_bg'>
+            <text class='cuser_address'>{{item.address}}</text>
+            <text class='cuser_timer'>{{item.time}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='line'></view>
+
+    </view>
+  </view>
+
+
+
+</scroll-view>

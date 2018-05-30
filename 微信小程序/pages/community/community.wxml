@@ -1,0 +1,42 @@
+<!--pages/community/community.wxml-->
+<import src="episodeCell/episode.wxml" />
+
+
+<navbar tabs="{{tabs}}" bindmyevent="myEventListener">
+  <!--全部  -->
+  <scroll-view style='height:{{scrollHeight}}px' class='scrollStyle' scroll-y='true' slot="0" hidden="{{curindex != 0}}" bindscrolltolower="loadMoreData" lower-threshold="100">
+    <template is="episode" wx:for="{{allValues}}" data="{{item}}">
+    </template>
+  </scroll-view>
+
+  <!--视频  -->
+  <scroll-view style='height:{{scrollHeight}}px' class='scrollStyle' scroll-y='true' slot="1" hidden="{{curindex != 1}}" bindscrolltolower="loadMoreData" lower-threshold="100">
+    <template is="episode" wx:for="{{videoValues}}" data="{{item}}">
+    </template>
+  </scroll-view>
+  <!--图片  -->
+  <scroll-view style='height:{{scrollHeight}}px' class='scrollStyle' scroll-y='true' slot="2" hidden="{{curindex != 2}}" bindscrolltolower="loadMoreData" lower-threshold="100">
+    <template is="episode" wx:for="{{picValues}}" data="{{item}}">
+
+    </template>
+  </scroll-view>
+
+  <!--段子  -->
+  <scroll-view style='height:{{scrollHeight}}px' class='scrollStyle' scroll-y='true' slot="3" hidden="{{curindex != 3}}" bindscrolltolower="loadMoreData" lower-threshold="100">
+    <template is="episode" wx:for="{{textValues}}" data="{{item}}">
+
+    </template>
+
+  </scroll-view>
+  <!--声音  -->
+  <scroll-view style='height:{{scrollHeight}}px' class='scrollStyle' scroll-y='true' slot="4" hidden="{{curindex != 4}}" bindscrolltolower="loadMoreData" lower-threshold="100">
+
+    <template is="episode" wx:for="{{audioValues}}" data="{{item}}">
+
+    </template>
+
+  </scroll-view>
+
+
+
+</navbar>

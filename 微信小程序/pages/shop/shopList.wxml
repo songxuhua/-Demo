@@ -1,0 +1,47 @@
+<!--pages/shop/shopList.wxml-->
+<import src="star.wxml" />
+
+<template name="shopList">
+  <view class='shop_list' wx:for="{{shops}}">
+    <!--mac  -->
+    <view class='bg'>
+
+      <!--bg  -->
+      <view class='shop_bg'>
+        <!--商铺的图片  -->
+        <image class='shopicon' src='{{item.icon}}' mode="aspectFit"></image>
+        <!--两列的bg  -->
+        <view class="column_bg">
+          <!--商铺名字、星数量、月销售额 的列  -->
+          <view class='oneColumn'>
+            <text class='shop_name'>{{item.name}}</text>
+            <template is="star" data="{{stars:item.stars}}"> </template>
+            <text class='sales grayText'>{{item.sales}}</text>
+          </view>
+          <view class='twoColumn'>
+            <!--时间和距离  -->
+            <view class='time_bg'>
+              <text class='time grayText'>{{item.time}}</text>
+              <view class='grayline'></view>
+              <text class='distance grayText'>{{item.distance}}</text>
+            </view>
+            <!-- 最上面的tag  -->
+             <!-- hidden='{{item.tags.length < 3}}'  -->
+             <!-- opacity设置透明度隐藏 -->
+            <view class='top_tag_bg'>
+            <!--  -->
+              <text class="{{item.styles[item.tags[2]] ? item.styles[item.tags[2]] :'tagText third_tag'}}" style='opacity:{{item.tags.length < 3 ? 0:1}}' >{{item.tags[2]}}</text>
+            </view>
+            <view class='bot_tag_bg'>
+              <text class= "{{item.styles[item.tags[1]] ? item.styles[item.tags[1]] :'two_tag tagText'}}" style='opacity:{{item.tags.length < 2 ? 0:1}}'>{{item.tags[1]}}</text>
+              <text class= "{{item.styles[item.tags[0]]}}" >{{item.tags[0]}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='line'></view>
+
+    </view>
+
+  </view>
+</template>

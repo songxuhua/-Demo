@@ -1,0 +1,7 @@
+/* pages/shop/shop.wxss */
+@import '/app.wxss';
+@import 'shopList.wxss';
+weui-grids {
+  position: relative;
+  overflow: hidden;
+}

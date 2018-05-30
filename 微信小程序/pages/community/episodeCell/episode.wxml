@@ -1,0 +1,74 @@
+<template name="episode">
+  <view class='cellStyle'>
+    <!--顶部视图  -->
+    <view class='topStyle'>
+      <image class='profileimgStyle' src='{{item.profile_image}}'></image>
+      <view class='topTextStyle'>
+        <text class='userStyle'>{{item.name}}</text>
+        <text class='timeStyle'>{{item.passtime}}</text>
+      </view>
+      <image class='moreStyle' src="../imgs/common/moreImage.png"> </image>
+    </view>
+
+    <!--中间视图  -->
+    <view class='midStyle'>
+      <!--段子  -->
+      <view class='midItemStyle' wx:if="{{item.text ? true : false}}">
+        <text>{{item.text}}</text>
+      </view>
+
+      <!--视频  -->
+      <view class='midItemStyle' wx:if="{{item.videouri ? true : false}}" >
+        <video src='{{item.videouri}}' id='{{item.id}}' catchtap='videoPlay' >
+        </video>
+      </view>
+
+      <!--图片  -->
+      <view class='midItemStyle' wx:if='{{(item.image1 && (!item.videouri && !item.voiceuri)) ? true : false}}'>
+        <image src='{{item.image1}}' mode='widthFix' ></image>
+      </view>
+
+      <!--声音  -->
+      <view class='midItemStyle' wx:if="{{item.voiceuri ? true : false}}" >
+        <audio src='{{item.voiceuri}}'  id='{{item.id}}' poster="{{item.bimageuri}}" author="{{item.screen_name}}" controls='true' catchtap='audioPlay'></audio>
+      </view>
+
+    </view>
+
+    <!--底部视图  -->
+    <view class='botStyle'>
+        <!--赞  -->
+        <view class='botItemStyle' bindtap='praise' >
+            <image src='../imgs/common/praiseImage.png' >
+             </image>
+            <text>{{item.love}}</text>
+        </view>
+
+    <!--倒  -->
+        <view class='botItemStyle' bindtap='unPraise' >
+            <image src='../imgs/common/criticizeImage.png' >
+             </image>
+            <text>{{item.hate}}</text>
+        </view>
+        <!--转发 -->
+        <view class='botItemStyle' bindtap='share'>
+            <image src='../imgs/common/shareImage.png' >
+             </image>
+            <text>{{item.repost}}</text>
+        </view>
+        <!--评论 -->
+        <view class='botItemStyle' bindtap='comment' >
+            <image src='../imgs/common/commentImage.png' >
+             </image>
+            <text>{{item.comment}}</text>
+        </view>
+
+    </view>
+    
+    <view class='line'></view>
+
+
+  </view>
+
+
+</template>

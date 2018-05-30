@@ -1,0 +1,27 @@
+<view class='bgview'>
+  <scroll-view class='leftScroll' scroll-y >
+    <view wx:for="{{categroys}}" class='{{curSelectIndex == index ? "leftItemStyle leftSelect" : "leftItemStyle leftUnSelect"}}'  catchtap='catSelected' data-index='{{index}}'> 
+      <view class='red_line' wx:if="{{curSelectIndex == index}}">
+      
+      </view>
+
+      <text class='{{curSelectIndex == index ? "cat_text redTextColor" : "cat_text normalTextColor" }} '>{{item.name}}</text>
+
+    </view>
+  
+  </scroll-view>
+
+  <scroll-view class='rightScroll' scroll-y>
+    <view class='rightItemStyle' wx:for="{{attendLists}}">
+      <image src='{{item.header}}' class='rightimgStyle'></image>
+      <view class='midStyle'>
+        <text class='rightuserStyle'>{{item.screen_name}}</text>
+        <text class='attendcountStyle'>{{item.fans_count}}人关注</text>
+      </view>
+      <button class='attendbtnStyle' wx:if="{{item.is_follow ? false: true}}">+关注</button>
+    </view>
+  </scroll-view>
+
+
+
+</view>

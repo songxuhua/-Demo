@@ -1,0 +1,98 @@
+.cellStyle {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.topStyle {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 10px 5px 12px;
+  position: relative;
+}
+
+.profileimgStyle {
+  width: 30px;
+  height: 30px; 
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+.topTextStyle {
+  display: flex;
+  flex-direction: column;
+}
+.userStyle {
+   color: #5072a5;
+   font-size: 12px;
+}
+
+.timeStyle {
+  color: #999;
+  font-size: 10px;
+}
+.moreStyle {
+  width:25px;
+  height: 25px;
+  top: -5px;
+  right: 10px;
+  position: absolute;
+}
+
+.midStyle .midItemStyle {
+  margin: 10px 10px 0px 10px;
+}
+.midItemStyle text {
+    font-size: 15px;
+    text-align: left;
+    color: #333;
+}
+
+.midItemStyle video {
+    width: 100%;
+}
+.midItemStyle image {
+    width: 100%;
+    height: 200px;
+}
+
+.midItemStyle audio {
+    width: 100%;
+}
+
+.botStyle {
+  display: flex;
+  flex-direction: row;
+  height: 40px; 
+}
+
+.botItemStyle {
+  width: 25%;
+  height: 20px;
+  display: flex;
+  margin-top: 7px;
+  flex-direction: row;
+
+  /* background-color: red; */
+}
+
+.botItemStyle image {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.botItemStyle text {
+  font-size: 10px;
+  align-self: center;
+  margin-left: 5px;
+  color: #999;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+}

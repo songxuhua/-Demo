@@ -1,0 +1,10 @@
+/* pages/community/community.wxss */
+@import '/app.wxss';
+@import './episodeCell/episode.wxss';
+
+.scrollStyle{
+   width: 100%;
+   height: 100%; 
+   display: flex;
+  flex-direction: column; 
+}

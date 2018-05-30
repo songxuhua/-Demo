@@ -1,0 +1,19 @@
+<!--pages/me/UserCenter.wxml-->
+<view class='bgStyle'>
+  <view class='headStyle'>
+    <image class='headImgStyle' src="{{}}"></image>
+    <text class='userTextStyle'></text>
+  </view>
+  <view class='downStyle'>
+    <text class='downTextStyle'>离线下载</text>
+  </view>
+
+  <view class='botStyle'>
+    <view wx:for="{{items}}" class='botItemStyle' catchtap='clickItem' data-index='{{index}}' >
+      <image src="{{item.image}}" mode="aspectFit"> </image>
+      <text>{{item.name}}</text>
+    </view>
+
+  </view>
+
+</view>

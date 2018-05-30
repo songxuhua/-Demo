@@ -1,0 +1,99 @@
+/* pages/attendtion/attendtion.wxss */
+.bgview {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftScroll {
+  width: 20%;
+  height: 100%;
+}
+.leftItemStyle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 44px;
+  border-bottom: 1rpx solid WhiteSmoke;
+}
+
+.leftSelect {
+  background-color: #fff;
+}
+
+.leftUnSelect {
+  background-color: #dcdcdc;
+}
+
+.red_line {
+  width: 3px;
+  height: 100%;
+  background-color: red;
+}
+
+.cat_text {
+  font-size: 13px;
+  padding-left: 10px;
+  align-self: center;
+}
+.redTextColor {
+  color: red;
+}
+.normalTextColor {
+  color: gray;
+}
+
+.rightScroll {
+  height: 100%;
+  flex: 1;
+  /* background-color: red; */
+}
+.rightItemStyle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  border-bottom: 1rpx solid WhiteSmoke;
+
+}
+
+.rightimgStyle {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+.midStyle {
+  display: flex;
+  flex-direction: column;
+}
+.rightuserStyle {
+  font-size: 13px;
+  color: black;
+  margin-top: 10px;
+}
+
+.attendcountStyle {
+  font-size: 13px;
+  color: gray;
+  margin-top: 5px;
+
+  margin-top: 5px;
+}
+
+attendcountStyle {
+  font-size: 13px;
+  color: gray;
+  margin-top: 5px;
+}
+.attendbtnStyle {
+  position: absolute;
+  right: 10px;
+  align-self: center;
+  color: red;
+  width: 60px;
+  height: 30px;
+  font-size: 11px;
+  border: 1rpx solid WhiteSmoke;
+} 
